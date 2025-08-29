@@ -1,0 +1,54 @@
+
+/*
+.linear td:nth-child(2){
+color: white;
+border: black;
+*/
+.linear td{
+    border: 2px solid black;
+}
+
+.card{
+    display:block;
+    width:85vw;
+    margin:3vw;
+    font-size: larger;
+    padding-left: 2%;;
+    border:2px solid purple;
+}
+input,button{
+    font-size: large;
+    margin-right: 20px;
+}
+#visualBox{
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    width:90vw;
+    padding:2% 10%;
+    padding-left:2%;
+}
+
+#visualBox tr:nth-child(odd){
+text-align: center;
+border: 2px solid black;
+}
+body{
+    padding:2%;
+    background-color: rgb(227, 206, 227);
+}
+/* Body text: Clean and highly readable */
+
+/* Headings: Strong and modern */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+h1{
+    color: purple;
+}
+h2{
+    color:crimson
+}
+/* Code blocks and snippets */
+code, pre,p,ol,input{
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+}

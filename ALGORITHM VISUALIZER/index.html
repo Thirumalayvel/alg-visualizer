@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ALGORITHM VISUALIZER</title>
+        <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=JetBrains+Mono:wght@400;600&family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <script type="module" src="visualize.js"></script>
+        <script  type="module" src="alg1.js"></script>
+        <script>
+          //  console.log(createNewRow([1,2,3]));
+        let arr;
+        let target;
+        function getInput(){
+            let text=document.getElementById('input').value;
+            input=NumArr(text);
+            console.log(input);
+            return input;
+        }
+        function handle(){
+            arr=getInput();
+            target=byId('target').value;
+            linear_search(arr,target);
+        }
+        function NumArr(str){
+        let num=[];
+        let strArr=str.split(',');
+        for(let i=0;i<strArr.length;i++){
+            num.push(Number(strArr[i]));
+        }
+        return num;
+        }
+        function removeRows(){
+            let table=byId('visualBox');
+            let rows=table.rows;
+            console.log(rows.length);
+            if(rows.length>0){
+                //alert("rows > 0");
+              document.querySelectorAll("tr").forEach(row => row.remove());
+            }
+           /* for(let i=0;i<rows.length;i++){
+            table.removeChild( rows[i]);    
+            console.log(rows[i]);
+            }*/
+        }
+        function remove(target){
+            byId(target).remove();
+        }
+        function clear(target){
+            byId(target).value="";
+        }
+        function clearINPUTS(){
+            byId('input').value="";
+            byId('target').value='';
+                        removeRows();
+        }
+        /*
+                  function addRow(){
+            let tble=document.getElementById('visualBox');
+            tble.appendChild(createNewRow([1,2,3]));
+        }
+        function addClone(){
+            let table=document.getElementById('visualBox');
+            console.log(table);
+            let row=table.rows[0];
+            //console.log(row.rows[0]);
+            document.getElementById('visualBox').appendChild(row);
+        }*/
+        </script>
+         <h1>ALGORITHM VISUALIZER</h1>
+         <hr>
+        <div class="card">
+            <h2>Linear search Algorithm</h2>
+         
+                <h3>Linear search is the simplest searching algorithm used to find an element in a list (or array). It works like this:</h3>
+                <ol>
+                  <li>  Start from the first element of the list.</li>
+<Li>
+Compare each element with the target value.</Li>
+<Li>If a match is found, return the position (index) of the element.</Li>
+<Li>
+If the end of the list is reached and no match is found, return not found (or -1 in most programming languages).
+</Li>
+                </ol>                
+                <h3>Example</h3>
+                <p>Array: [10, 20, 30, 40, 50]
+                <br>Target: 30</p>
+                <h3>Visualize linear search with input:</h3>
+         <input type="text" id="input" name="input" placeholder="list of nums">
+        <input type="number" id="target" placeholder="target value">
+        <button onclick="clearINPUTS()">clear inputs</button>
+        <button onclick="handle()">linear</button>
+        <table id="visualBox" class="linear"></table> 
+                </div>
+    </body>
+
+</html>
