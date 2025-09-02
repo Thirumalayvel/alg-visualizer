@@ -22,6 +22,7 @@
             return input;
         }
         function handle(){
+            if(document.getElementById('visualBox').rows.length>0) removeRows();
             arr=getInput();
             target=byId('target').value;
             linear_search(arr,target);
