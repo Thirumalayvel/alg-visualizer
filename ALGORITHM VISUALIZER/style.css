@@ -52,3 +52,14 @@ h2{
 code, pre,p,ol,input{
   font-family: 'Fira Code', 'JetBrains Mono', monospace;
 }
+button{
+    color:rgb(224, 212, 224);
+    background-color: purple;
+    border-radius: 10%;
+    margin:auto 5px;
+    cursor: pointer;
+    box-shadow:0px 0px 2px rgb(224, 212, 224);
+}
+button:hover{
+    font-size: large;
+}
